@@ -8,8 +8,8 @@
 @load ./http
 @load ./irc
 @load ./krb
-#@load ./modbus
-#@load ./mysql
+@load ./modbus
+@load ./mysql
 #@load ./ntlm
 #@load ./ntp
 #@load ./radius

@@ -8,7 +8,7 @@ export {
 
 event dnp3_application_request_header(c: connection, is_orig: bool, application: count, fc: count)
     {
-    if ( c?$community_id )
+    if ( ! c$dnp3?$community_id && c?$community_id )
         c$dnp3$community_id = c$community_id;
     }
 

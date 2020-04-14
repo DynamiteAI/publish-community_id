@@ -8,7 +8,7 @@ export {
 
 event ftp_request(c: connection, command: string, arg: string)
     {
-    if ( c?$community_id )
+    if ( ! c$ftp$community_id && c?$community_id )
         c$ftp$community_id = c$community_id;
     }
 

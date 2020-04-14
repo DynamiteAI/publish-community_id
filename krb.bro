@@ -8,7 +8,7 @@ export {
 
 event krb_ap_request(c: connection, ticket: KRB::Ticket, opts: KRB::AP_Options)
     {
-    if ( c?$community_id )
+    if ( ! c$krb?$community_id && c?$community_id )
         c$krb$community_id = c$community_id;  
     }
 
@@ -20,7 +20,7 @@ event krb_ap_response(c: connection)
 
 event krb_as_request(c: connection, msg: KRB::KDC_Request)
     {
-    if ( c?$community_id )
+    if ( ! c$krb?$community_id && c?$community_id )
         c$krb$community_id = c$community_id;
     }
 
@@ -32,7 +32,7 @@ event krb_as_response(c: connection, msg: KRB::KDC_Response)
 
 event krb_tgs_request(c: connection, msg: KRB::KDC_Request)
     {
-    if ( c?$community_id )
+    if ( ! c$krb?$community_id && c?$community_id )
         c$krb$community_id = c$community_id;
     }
 

@@ -7,7 +7,7 @@ export {
 }
 event irc_request(c: connection, is_orig: bool, prefix: string, command: string, arguments: string)
     {
-    if ( c?$community_id )
+    if ( ! c$irc?$community_id && c?$community_id )
         c$irc$community_id = c$community_id;
     }
 
