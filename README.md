@@ -18,7 +18,7 @@ So you know this wasn't done all willy nilly, here are some things we tried to a
 * deal with asymmetry and loss - accommodate split transactions, request with no reply and reply with no request
 * modular and fault tolerant - things won't blow up if you disable a protocol analyzer 
 
-*Install instructions*
+**Install instructions**
 1) Install Zeek
 2) Install the community_id Zeek package
 3) Install the publish-community_id package 
