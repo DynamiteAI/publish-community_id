@@ -5,7 +5,7 @@ This capability currently exists in both tools, as a configurable option in Suri
 
 Why not put the community_id everywhere?  That way, one query (or grep) can return all the logs related to a given connection. 
 
-Unfortunately, Zeek doesn't provide a native mechanism for adding a new field to a log stream based on the contents of the underlying connection record.  This missing functionality is detailed in this [issue](https://github.com/corelight/zeek-community-id/issues/3 issue).  
+Unfortunately, Zeek doesn't provide a native mechanism for adding a new field to a log stream based on the contents of the underlying connection record.  This missing functionality is detailed in this [issue](https://github.com/corelight/zeek-community-id/issues/3).  
 
 
 So, in leiue of a better solution, while we ponder modifying Zeek's source to do this better... we dug deep and wrote all of the Zeek script code needed to safely publish the community_id across all of Zeek's logs.  Its not perfect, but better than nothing...  The publish-community_id package can be used instead of the Zeek script contained in the community_id package and anywhere you expect to see a Zeek UID, you'll also see a community_id.  You can now associate all of your favorite Zeek events with related Suricata alerts, and vice versa, without all the grep and re-greping.
