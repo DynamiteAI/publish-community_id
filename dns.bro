@@ -7,7 +7,7 @@ export {
     };
 }
 
-event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qclass: count)
+event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qclass: count) &priority=-5
     {
     # new_connection is not being triggered for UDP, so we need another plan 
     if (! c$dns?$community_id && c?$community_id)

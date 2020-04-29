@@ -1,4 +1,4 @@
-@ifdef
+@ifdef (NTP::Info)
 export {
     redef record NTP::Info += {
         community_id: string &optional &log;
