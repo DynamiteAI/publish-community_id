@@ -12,7 +12,7 @@ So, in leiue of a better solution, while we ponder modifying Zeek's source to do
 
 So you know this wasn't done all willy nilly, here are some things we tried to accomplish:
 
-* be Zeek 2.6 through 3.1 compatible - mindful of event name and signature changes across Zeek versions
+* be mindful of event name and signature changes across Zeek versions
 * make minimal calls to hash_conn() - only calculate the community_id once per connection 
 * minimize memory footprint - store the ID value once and reuse it as needed for other app-layer logs 
 * deal with asymmetry and loss - accommodate split transactions, request with no reply and reply with no request
